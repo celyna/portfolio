@@ -4,7 +4,13 @@ This is a standalone portfolio project with a new Git history, not a copy of the
 
 The starting inspiration was [ascii-sharks](https://github.com/stackedlol/ascii-sharks), by drewdi. The integer hash utility in `src/math.ts` is adapted from that project. The canvas lifecycle structure (resize observers, pointer listeners, animation scheduling, and reduced-motion handling) also builds on its approach. The original shark outlines, ocean renderer, fish behavior, species data, and React wrapper are not included.
 
-The source photo references informed the procedural forms. The photos are not distributed in this repository; the forms are generated in code rather than embedded copies of those images.
+The tattoo reference photos informed the procedural sigils and are not distributed in this repository.
+
+## Painting reference and generated extension
+
+The active homepage uses Caspar David Friedrich's *Wanderer above the Sea of Fog*. The reference reproduction is from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg), credited there to Cybershot800i. The original reference is retained as `src/assets/wanderer.jpg`. The landscape version, `src/assets/wanderer-landscape.png`, is an AI-assisted extension: the right-hand valleys, mist, and peaks are inferred additions, not the original painting. The visible homepage renders characters sampled from this asset.
+
+The independent pointer attraction/repulsion implementation was inspired by the controls at [ASC11](https://asc11.com/library/abstract-brand-wallpaper-variant-b-inter-1-2-1-jpg). No ASC11 code or image assets are included.
 
 The MIT notice below is retained for the adapted upstream material. New project code is covered by the root LICENSE.
 
