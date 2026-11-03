@@ -4,12 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="Celyna's personal portfolio. A Chinese-character study of Wanderer above the Sea of Fog." />
+    <meta name="description" content="Celyna's personal portfolio. An interactive Chinese-character study of Wanderer Above the Sea of Fog." />
     <title>Celyna — Portfolio</title>
   </head>
   <body>
     <main aria-label="Portfolio homepage">
-      <canvas id="sigils" role="img" aria-label="Full-page recreation of Wanderer above the Sea of Fog in randomized Chinese nature characters. Move the pointer to warp the characters; hold to push them away."></canvas>
+      <canvas id="sigils" role="img" aria-label="Wanderer Above the Sea of Fog rendered in Chinese nature characters. Move the cursor to warp the characters; hold to push them away."></canvas>
+      <aside class="about-note" aria-label="About me">
+        <p><span class="blurb-highlight">somewhere between art and <span class="last-word">technology<span class="insertion-caret" aria-hidden="true"></span></span></span></p>
+        <p class="about-description"><span>currently a software engineer ii @ jp morgan building financial workflows for 27k+ clients. prev @ nasa jpl &amp; medius.</span></p>
+        <nav class="about-links" aria-label="Personal links">
+          <a href="https://github.com/celyna" target="_blank" rel="noopener noreferrer">github</a>
+          <a role="link" aria-disabled="true">resume</a>
+          <a role="link" aria-disabled="true">projects</a>
+          <a role="link" aria-disabled="true">about</a>
+          <a role="link" aria-disabled="true">contact me</a>
+        </nav>
+      </aside>
     </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
