@@ -3,24 +3,59 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="Celyna's personal portfolio. An interactive Chinese-character study of Wanderer Above the Sea of Fog." />
-    <title>Celyna — Portfolio</title>
+    <meta name="theme-color" content="#e9decc" />
+    <meta name="description" content="celyna’s personal portfolio." />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&amp;family=Handjet:wght@500&amp;family=Poppins&amp;display=swap" />
+    <title>celyna — portfolio</title>
   </head>
   <body>
-    <main aria-label="Portfolio homepage">
-      <canvas id="sigils" role="img" aria-label="Wanderer Above the Sea of Fog rendered in Chinese nature characters. Move the cursor to warp the characters; hold to push them away."></canvas>
-      <aside class="about-note" aria-label="About me">
-        <p><span class="blurb-highlight">somewhere between art and <span class="last-word">technology<span class="insertion-caret" aria-hidden="true"></span></span></span></p>
-        <p class="about-description"><span>currently a software engineer ii @ jp morgan building financial workflows for 27k+ clients. prev @ nasa jpl &amp; medius.</span></p>
-        <nav class="about-links" aria-label="Personal links">
-          <a href="https://github.com/celyna" target="_blank" rel="noopener noreferrer">github</a>
-          <a role="link" aria-disabled="true">resume</a>
-          <a role="link" aria-disabled="true">projects</a>
-          <a role="link" aria-disabled="true">about</a>
-          <a role="link" aria-disabled="true">contact me</a>
-        </nav>
-      </aside>
+    <main>
+      <section class="sampler" aria-label="introduction">
+        <div class="hoop">
+          <svg class="embroidery" viewBox="0 0 680 760" preserveAspectRatio="none" aria-hidden="true"></svg>
+          <div class="introduction">
+            <h1 lang="zh-Hant">紫瓊</h1>
+            <p class="bio">hi i'm celyna ♡ software engineer building products at the intersection of complex workflows, thoughtful interfaces, and applied AI. currently @ jpmorgan, building financial tools for 27k+ clients. prev @ nasa jpl.</p>
+            <nav aria-label="personal links">
+              <a href="https://github.com/celyna">github</a>
+              <a href="./Celyna_Su.pdf" target="_blank" rel="noopener">resume</a>
+              <a href="#projects">projects</a>
+              <a href="https://www.linkedin.com/in/celyna/">linkedin</a>
+              <a href="mailto:celynacsu@gmail.com">contact me</a>
+            </nav>
+            <time class="local-clock" aria-label="your local time"></time>
+          </div>
+        </div>
+      </section>
+      <section class="projects" id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">
+          <span class="projects-ornament" aria-hidden="true">✧ ˚ ♡</span>
+          <span class="projects-word">projects</span>
+          <span class="projects-ornament" aria-hidden="true">♡ ˚ ✧</span>
+        </h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <span class="project-stitch" aria-hidden="true">✦ · ♡ · ✦</span>
+            <h3>healf</h3>
+            <p>connects oura and apple health data to send personalized recovery check-ins throughout the day.</p>
+            <div class="project-links">
+              <a href="https://github.com/celyna/healf/blob/main/docs/media/healf-demo.mp4">watch demo</a>
+              <a href="https://github.com/celyna/healf" aria-label="healf source on github">source</a>
+            </div>
+            <p class="project-stack">node.js · openai · sqlite · docker · oauth</p>
+          </article>
+          <article class="project-card">
+            <span class="project-stitch" aria-hidden="true">✦ · ◈ · ✦</span>
+            <h3>filmish</h3>
+            <p>upload a reference photo to find fujifilm recipes with similar colors and tones.</p>
+            <div class="project-links">
+              <a href="https://filmish-two.vercel.app/">try it</a>
+              <a href="https://github.com/celyna/filmish" aria-label="filmish source on github">source</a>
+            </div>
+            <p class="project-stack">next.js · react · typescript · sharp · image processing</p>
+          </article>
+        </div>
+      </section>
     </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
