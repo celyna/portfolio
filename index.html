@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#e9decc" />
     <meta name="description" content="celyna’s personal portfolio." />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&amp;family=Handjet:wght@500&amp;family=Poppins&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans&amp;family=DotGothic16&amp;family=Handjet:wght@500&amp;display=swap" />
     <title>celyna — portfolio</title>
   </head>
   <body>
+    <canvas class="painting-dotwork" aria-hidden="true"></canvas>
     <main>
       <section class="sampler" aria-label="introduction">
         <div class="hoop">
           <svg class="embroidery" viewBox="0 0 680 760" preserveAspectRatio="none" aria-hidden="true"></svg>
           <div class="introduction">
             <h1 lang="zh-Hant">紫瓊</h1>
-            <p class="bio">hi i'm celyna ♡ software engineer building products at the intersection of complex workflows, thoughtful interfaces, and applied AI. currently @ jpmorgan, building financial tools for 27k+ clients. prev @ nasa jpl.</p>
+            <p class="bio">
+              hi im celyna ♡<br>
+              product-minded software engineer making the complicated feel intuitive.<br>
+              currently @ jpmorgan, building financial tools for 27k+ clients. prev @ nasa jpl.
+            </p>
             <nav aria-label="personal links">
               <a href="https://github.com/celyna">github</a>
               <a href="./Celyna_Su.pdf" target="_blank" rel="noopener">resume</a>
@@ -35,7 +40,12 @@
         </h2>
         <div class="project-grid">
           <article class="project-card">
-            <span class="project-stitch" aria-hidden="true">✦ · ♡ · ✦</span>
+            <div class="project-preview healf-preview">
+              <picture>
+                <source media="(prefers-reduced-motion: reduce)" srcset="./src/assets/healf-demo-poster.png">
+                <img src="./src/assets/healf-demo.gif" alt="Healf notification with sample readiness, HRV, and sleep scores opens and scrolls in ntfy" width="756" height="602" loading="lazy">
+              </picture>
+            </div>
             <h3>healf</h3>
             <p>connects oura and apple health data to send personalized recovery check-ins throughout the day.</p>
             <div class="project-links">
@@ -45,7 +55,12 @@
             <p class="project-stack">node.js · openai · sqlite · docker · oauth</p>
           </article>
           <article class="project-card">
-            <span class="project-stitch" aria-hidden="true">✦ · ◈ · ✦</span>
+            <div class="project-preview filmish-preview">
+              <picture>
+                <source media="(prefers-reduced-motion: reduce)" srcset="./src/assets/filmish-demo-poster.png">
+                <img src="./src/assets/filmish-demo.gif" alt="Filmish demo showing photo matching for Fujifilm recipes" width="432" height="344" loading="lazy">
+              </picture>
+            </div>
             <h3>filmish</h3>
             <p>upload a reference photo to find fujifilm recipes with similar colors and tones.</p>
             <div class="project-links">

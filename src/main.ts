@@ -1,4 +1,5 @@
 import './style.css';
+import './painting-dotwork';
 
 if (new URLSearchParams(location.search).get('font') === 'handjet') {
   document.documentElement.dataset.bioFont = 'handjet';
@@ -48,8 +49,10 @@ function diamond(x: number, y: number, size: number) {
 const turn = 2 * Math.PI;
 const cx = 340;
 const cy = 380;
+const ovalRadiusX = 247;
+const ovalRadiusY = 313;
 function oval(angle: number, inset = 0): [number, number] {
-  return [cx + (247 - inset) * Math.cos(angle), cy + (313 - inset) * Math.sin(angle)];
+  return [cx + (ovalRadiusX - inset) * Math.cos(angle), cy + (ovalRadiusY - inset) * Math.sin(angle)];
 }
 
 curve(t => oval(t * turn, 13), 1400);
@@ -105,6 +108,13 @@ for (const { x, y, cross } of stitches.values()) {
 }
 
 frame.innerHTML = `
+  <defs>
+    <radialGradient id="embroidery-backing">
+      <stop offset="76%" stop-color="#faf4e8" stop-opacity=".44"/>
+      <stop offset="100%" stop-color="#faf4e8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse fill="url(#embroidery-backing)" cx="${cx}" cy="${cy}" rx="${ovalRadiusX}" ry="${ovalRadiusY}"/>
   <path d="${dots.join('')}" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/>
   <path d="${crosses.join('')}" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
 `;
@@ -122,23 +132,3 @@ function updateClock() {
 }
 
 updateClock();
-
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-let lastPixelAt = -Infinity;
-let pixelCount = 0;
-
-window.addEventListener('pointermove', (event) => {
-  if (event.pointerType !== 'mouse' || reducedMotion.matches) return;
-  if (event.timeStamp - lastPixelAt < 24) return;
-  lastPixelAt = event.timeStamp;
-
-  const grid = 4;
-  const pixel = document.createElement('span');
-  pixel.className = 'cursor-pixel';
-  pixel.toggleAttribute('data-stitch', pixelCount++ % 5 === 0);
-  pixel.setAttribute('aria-hidden', 'true');
-  pixel.style.left = Math.round(event.clientX / grid) * grid + 'px';
-  pixel.style.top = Math.round(event.clientY / grid) * grid + 'px';
-  document.body.append(pixel);
-  pixel.addEventListener('animationend', () => pixel.remove(), { once: true });
-}, { passive: true });
