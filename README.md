@@ -1,5 +1,7 @@
 # Portfolio
 
+Live site · [celyna.dev](https://celyna.dev/)
+
 A full-screen, text-free character-art interpretation of *Wanderer above the Sea of Fog*. An AI-extended landscape places the wanderer left of center. Tiny randomized Chinese nature characters follow the terrain, sky, and fog; pointer movement warps the characters with a spring effect.
 
 Hover to attract characters; hold and drag to repel them. Move away and they settle back. Touch dragging and reduced-motion preferences are supported. See [PAINTING.md](PAINTING.md) for artwork provenance and implementation notes.
