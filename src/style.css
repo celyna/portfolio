@@ -134,9 +134,12 @@ nav span { color: #3f433b; }
 
 .projects {
   width: min(100% - 40px, 900px);
+  min-height: 100svh;
   margin-inline: auto;
-  padding: 32px 0 clamp(64px, 12vh, 120px);
-  scroll-margin-top: 20px;
+  padding-block: clamp(24px, 5svh, 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .projects h2 {
@@ -145,7 +148,7 @@ nav span { color: #3f433b; }
   align-items: center;
   justify-content: center;
   gap: clamp(8px, 3vw, 20px);
-  font: 400 2rem/1.04 "Jacquard 12", Baskerville, Georgia, serif;
+  font: 400 clamp(2.5rem, 6vw, 3.25rem)/1.04 "Jacquard 12", Baskerville, Georgia, serif;
 }
 
 .projects-word,
